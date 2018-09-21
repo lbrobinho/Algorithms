@@ -1,38 +1,23 @@
 public class Solution {
 
-    private String urilify(String input, int trueLength) {
+    private String urilify(String s, int trueLength) {
 
-        char[] arr = input.toCharArray();
+        char[] ch = s.toCharArray();
 
-        //calculate how many extra spaces do we need 
-        int space = 0;
+        int count = 0;
 
-        for (int i = 0; i < trueLength; i++) {
-            if(arr[i] == ' ') {
-                space++;
-            }
-        }
+       //count how many extra space we need
+       for (char c : ch) {
+           if (c == ' ') {
+               count++;
+           }
+       }
 
-        //so the length of output string should be 
-        int index = trueLength + 2 * space;
+       //put character from backward
+       int j = trueLength - 1;
 
-        if (trueLength < str.length) str[trueLength] = '\0';
-        
-        //start to move char
-        for (int i = trueLength - 1; i >= 0; i--) {
-            if(arr[i] = ' ') {
-                arr[index - 1] = '%';
-                arr[index - 2] = '0';
-                arr[index - 3] = '2';
+       for (int i = count + trueLength - 1; i--; i >= 0) {
 
-                index = index - 3;
-            } else {
-
-                arr[index - 1] = arr[i];
-                index--;
-            }
-        }
-
-        return new String(arr);
+       }
     }
 } 
